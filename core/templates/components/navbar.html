@@ -1,0 +1,16 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">Navbar</a>
+      {% if user.is_authenticated %}
+      <div class="btn-group dropstart">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropstart
+        </button>
+        <ul class="dropdown-menu">
+          <!-- Dropdown menu links -->
+           <li class="dropdown-item"><strong><a href="{% url 'logout' %}">Logout</a></strong></li>
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </nav>
